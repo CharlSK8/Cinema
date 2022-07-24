@@ -1,0 +1,27 @@
+package com.cinema.app;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.Rollback;
+
+import com.cinema.app.model.Usuario;
+import com.cinema.app.repository.UsuarioRepository;
+
+public class UsuarioTest {
+	
+	@Autowired
+	private UsuarioRepository usuarioRepository;
+	
+	
+	@Test
+	@Rollback(false)
+	public void testUsuario() {
+		Usuario usuario = new Usuario(1017267474, "charlie", "Cédula", "Alejandra", "Alzate", "alejita@gmail.com", "morgana");
+		Usuario usuarioSave = usuarioRepository.save(usuario);
+		assertNotNull(usuarioSave);
+		
+	}
+
+}

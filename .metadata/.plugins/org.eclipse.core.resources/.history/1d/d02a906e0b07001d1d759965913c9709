@@ -1,0 +1,5 @@
+package com.cinema.app.controller;
+
+public class UsuarioController {
+
+}

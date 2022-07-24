@@ -1,0 +1,16 @@
+package com.cinema.app.model;
+
+public class Usuario {
+	
+	private int id;
+	private int numeroDeDocumento;
+	private String contraseña;
+	private String tipoDeDocumento;
+	private String nombre;
+	private String apellidos;
+	private String correoElectronico;
+	private String contraseñaCorreo;
+	
+	
+
+}

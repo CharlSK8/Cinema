@@ -1,0 +1,51 @@
+package com.cinema.app.service;
+
+import java.util.Optional;
+
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties.Pageable;
+import org.springframework.data.domain.Page;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.cinema.app.model.Usuario;
+import com.cinema.app.repository.UsuarioRepository;
+
+public class UsuarioServiceImplement implements UsuarioService{
+	
+	@Autowired
+	private UsuarioRepository usuarioRepository;
+
+	@Override
+	@Transactional(readOnly = true)
+	public Iterable<Usuario> findAll() {
+		return usuarioRepository.findAll();
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public Page<Usuario> findAll(Pageable pageable) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Optional<Usuario> findById(long id) {
+		// TODO Auto-generated method stub
+		return Optional.empty();
+	}
+
+	@Override
+	public Usuario save(Usuario usuario) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteById(long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
